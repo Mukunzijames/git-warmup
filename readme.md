@@ -340,3 +340,38 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises>
 this project of git exercises
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout -b ft/bundle-2 
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout ft/bundle-2 
+Already on 'ft/bundle-2'
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git add service.html
+[ft/bundle-2 966b873] service
+ 1 file changed, 12 insertions(+)
+ create mode 100644 service.html
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 492 bytes | 98.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Mukunzijames/git-warmup/pull/new/ft/bundle-2
+remote:
+To https://github.com/Mukunzijames/git-warmup.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> 
+ *  History restored 
+
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> 
