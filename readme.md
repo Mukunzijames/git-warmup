@@ -340,3 +340,129 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises>
 this project of git exercises
+   This reverts commit 4e002cd9a74eeceb924e406ad7e5eeff72aa74ed.
+
+commit ec99d80d63af2658c0811b023d6bde8eff6f167d (origin/ft/faq-page)
+Author: unknown <mukunzindahiro@gmail.com>
+Date:   Thu May 25 07:52:30 2023 -0700
+
+    faq
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push
+fatal: unable to access 'https://github.com/Mukunzijames/git-warmup.git/': Could not resolve host: github.com
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 271 bytes | 8.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Mukunzijames/git-warmup.git
+   ec99d80..a9f3345  ft/faq-page -> ft/faq-page
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> 
+ *  History restored 
+
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout main
+Switched to branch 'main'
+M       service.html
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git add --all
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+Your branch is up to date with 'origin/main'.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git commit -m "homepage discription"
+[main 8c33c3c] homepage discription
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout  ft/home-page-redesign  
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+On branch ft/home-page-redesign
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git add home.html
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+On branch ft/home-page-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git commit -m "commit changes"
+[ft/home-page-redesign bc1b325] commit changes
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 22, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Total 19 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:
+To https://github.com/Mukunzijames/git-warmup.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git log
+Author: unknown <mukunzindahiro@gmail.com>
+
+    Revert "team features"
+    This reverts commit 4e002cd9a74eeceb924e406ad7e5eeff72aa74ed.
+
+commit ec99d80d63af2658c0811b023d6bde8eff6f167d
+Author: unknown <mukunzindahiro@gmail.com>
+Date:   Thu May 25 07:52:30 2023 -0700
+
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout -b ft/merge
+Switched to a new branch 'ft/merge'
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git status
+On branch ft/merge
+nothing to commit, working tree clean
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git merge main
+Merge made by the 'ort' strategy.
+ .gitignore   | 0
+ home.html    | 3 +++
+ service.html | 2 +-
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises> git checkout  ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+Your branch is up to date with 'origin/ft/home-page-redesign'.
+PS C:\Users\Uwimpuhwe Honorine\Desktop\git-exercises>
